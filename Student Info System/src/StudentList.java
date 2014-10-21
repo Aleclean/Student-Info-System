@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class StudentList
 	{
 	
-	private String lastName;
 	private String firstName;
+	private String lastName;
 	private String courseOne;
 	private String gradeOne;
 	private String courseTwo;
@@ -14,10 +14,10 @@ public class StudentList
 	private String gradeThree;
 	private double gpa;
 	
-	public StudentList(String l, String f, String co, String go, String ct, String gt, String cth, String gth, double g)
+	public StudentList(String f, String l, String co, String go, String ct, String gt, String cth, String gth, double g)
 	{
+		firstName = f;	
 		lastName = l;
-		firstName = f;
 		courseOne = co;
 		gradeOne = go;
 		courseTwo = ct;

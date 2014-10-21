@@ -1,10 +1,10 @@
 import java.util.Comparator;
 
-public class GPASorter
+public class GPASorter implements Comparator <StudentList>
 	{
 	public int compare (Student s1 , Student s2)
 		{
-		if(s1.getScore() < s2.getScore())
+		if(s1.getGpa() < s2.getGpa())
 			return 1;
 		else
 			return -1;
