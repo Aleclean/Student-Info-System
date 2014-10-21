@@ -1,9 +1,15 @@
 
 public class Student
 	{
-	System.out.println("What is your name?");
-	studentList.add(firstName, lastName, course, );
-	studentList.remove();
+		String lastName 
+	
+	}
+public void addStudent()
+	{
+	StudentList.add(new Student(lastName, firstName, courseOne, gradeOne, courseTwo, gradeTwo, courseThree, gradeThree, gpa));
+	}
+public void removeStudent()
+	{
+	studentList.remove(lastName, firstName, courseOne, "null", courseTwo, "null", courseThree, "null", gpa);
 	}
 //add and delete students from the ArrayList
-
