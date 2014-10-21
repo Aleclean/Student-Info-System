@@ -10,6 +10,6 @@ public void addStudent()
 	}
 public void removeStudent()
 	{
-	studentList.remove(lastName, firstName, courseOne, "null", courseTwo, "null", courseThree, "null", gpa);
+	StudentList.remove(lastName, firstName, courseOne, "null", courseTwo, "null", courseThree, "null", gpa);
 	}
 //add and delete students from the ArrayList
