@@ -16,7 +16,7 @@ public class Database
 	String gradeThree = file.next();
 	double gpa = 0;
 	
-	ArrayList <Student> StudentList = new ArrayList <Student>();
+	ArrayList <Student> studentList = new ArrayList <Student>();
 		{
 		
 		}

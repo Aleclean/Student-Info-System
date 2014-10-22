@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 public class StudentRunner
@@ -26,12 +27,12 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					addStudent();
+					Student.addStudent();
 					break;
 					}
 				case 2:
 					{
-					removeStudent();
+					Student.removeStudent();
 					break;
 					}
 				}
@@ -47,12 +48,12 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					changeGrade();
+					Student.changeGrade();
 					break;
 					}
 				case 2:
 					{
-					changeClass();
+					Student.changeClass();
 					break;
 					}
 				}
@@ -69,15 +70,15 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					addStudent();
+					Collections.sort(studentList, new NameSorter());
 					}
 				case 2:
 					{
-					removeStudent();
+					Collections.sort(studentList, new GPASorter());
 					}
 				case 3:
 					{
-					
+					Collections.sort(studentList, new CourseSorter());
 					}
 				}
 			}
