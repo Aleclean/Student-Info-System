@@ -1,10 +1,12 @@
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Scanner;
 
 public class StudentRunner
 	{
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 		{
+		Database.fillDataBase();
 		promptUser();
 		}
 
@@ -27,12 +29,12 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					Student.addStudent();
+//					Database.addStudent();
 					break;
 					}
 				case 2:
 					{
-					Student.removeStudent();
+//					Database.removeStudent();
 					break;
 					}
 				}
@@ -48,12 +50,12 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					Student.changeGrade();
+//					Database.changeGrade();
 					break;
 					}
 				case 2:
 					{
-					Student.changeClass();
+//					Database.changeClass();
 					break;
 					}
 				}
@@ -70,15 +72,15 @@ public class StudentRunner
 				{
 				case 1:
 					{
-					Collections.sort(studentList, new NameSorter());
+					Collections.sort(Database.studentList, new NameSorter());
 					}
 				case 2:
 					{
-					Collections.sort(studentList, new GPASorter());
+					Collections.sort(Database.studentList, new GPASorter());
 					}
 				case 3:
 					{
-					Collections.sort(studentList, new CourseSorter());
+					Collections.sort(Database.studentList, new CourseSorter());
 					}
 				}
 			}

@@ -1,4 +1,3 @@
-
 public class StudentGrade
 	{
 	public void setGpa()
@@ -7,10 +6,10 @@ public class StudentGrade
 	double gpa;
 	double gradePoints;
 	double totalGradePoints;
-
-		{
+	
+	{
 		
-	public static void retrieveGrades()
+public static void retrieveGrades()
 	{
 	for(int i = 0; i < Database.file.size(); i ++)
 		letterGrade = Database.studentList.get(i).getGradeOne;
