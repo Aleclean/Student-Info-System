@@ -6,25 +6,23 @@ import java.util.Scanner;
 public class Database
 	{
 	static ArrayList<Student> studentList = new ArrayList<Student>();
-
+	
 	public static void fillDataBase() throws IOException
 		{
 		Scanner file = new Scanner(new File("studentlist (2).txt"));
-
-		String firstName = file.next();
-		String lastName = file.next();
-		String courseOne = file.next();
-		String gradeOne = file.next();
-		String courseTwo = file.next();
-		String gradeTwo = file.next();
-		String courseThree = file.next();
-		String gradeThree = file.next();
-		double gpa = 0;
-
+		
 		while(file.hasNext())
 			{
-			studentList.add(new Student(firstName, lastName, courseOne, gradeOne,
-							courseTwo, gradeTwo, courseThree, gradeThree, 0.0));
+			String firstName = file.next();
+			String lastName = file.next();
+			String courseOne = file.next();
+			String gradeOne = file.next();
+			String courseTwo = file.next();
+			String gradeTwo = file.next();
+			String courseThree = file.next();
+			String gradeThree = file.next();
+			double gpa = 0;
+			studentList.add(new Student(firstName, lastName, courseOne, gradeOne, courseTwo, gradeTwo, courseThree, gradeThree, 0.0));
 			}
 		}
 	public static void studentInfo()
@@ -40,22 +38,51 @@ public class Database
 		String courseThree = file.next(); 
 		String gradeThree = file.next();
 		double gpa = file.nextDouble();
-		
-	public static addStudent()
-		{
-			studentList.add(firstName, lastName, courseOne, gradeOne, courseTwo, gradeTwo, courseThree, gradeThree, gpa);
 		}
-	public static removeStudent()
+		
+	public static void addStudent()
 		{
+		System.out.println("Enter the students first name");
+		Scanner userInput1 = new Scanner(System.in);
+		String firstName = userInput1.nextLine();
+		System.out.println("Enter the students last name");
+		String lastName = userInput1.nextLine();
+		System.out.println("Enter the students first course");
+		String courseOne = userInput1.nextLine();
+		System.out.println("Enter the students letter grade in their first course");
+		String gradeOne = userInput1.nextLine();
+		System.out.println("Enter the students second course");
+		String courseTwo = userInput1.nextLine();
+		System.out.println("Enter the students letter grade in their second course");
+		String gradeTwo = userInput1.nextLine();
+		System.out.println("Enter the students third course");
+		String courseThree = userInput1.nextLine();
+		System.out.println("Enter the students letter grade in their third course");
+		String gradeThree = userInput1.nextLine();
+		double gpa = 0;
+		studentList.add(new Student(firstName, lastName, courseOne, gradeOne, courseTwo, gradeTwo, courseThree, gradeThree, gpa));
+		}
+	
+	public static void removeStudent()
+		{
+		int counter = 1;
 		System.out.println("Which student would you like to remove?");
-		System.out.println("studentlist(2).txt");
+		for(int i = 0; i < studentList.size(); i++)
+			{
+			System.out.println(counter + "). " + studentList.get(i).getFirstName() + " " + studentList.get(i).getLastName());
+			counter++;
+			}
 		Scanner userInput1 = new Scanner(System.in);
 		studentList.remove(userInput1);
 		}
-
+	
+	public static void changeGrade()
+		{
+		System.out.println("Which student's grade would you like to change?");
+		System.out.println("studentlist (2).txt");
+		}
 	}
-}
+
+
 	
-	
-		
-	
+
