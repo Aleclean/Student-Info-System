@@ -1,4 +1,4 @@
-
+import java.text.DecimalFormat;
 public class StudentGrade
 	{
 
@@ -6,11 +6,18 @@ public class StudentGrade
 	public static String letterGrade;
 	public static double totalGradePoints;
 
+	public static void calculateGrade()
+		{
+		System.out.printf("%.2f", totalGradePoints);
+		System.out.println();
+		}
 	
 	public static void retrieveGrades()
 		{
 		for(int i = 0; i < Database.studentList.size(); i ++)
 			{
+			String pattern = "##.#";
+			DecimalFormat decimalformat = new DecimalFormat(pattern);
 			letterGrade = Database.studentList.get(i).getGradeOne();
 				setPoints();
 			letterGrade = Database.studentList.get(i).getGradeTwo();
