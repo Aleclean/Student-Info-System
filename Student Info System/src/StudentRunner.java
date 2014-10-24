@@ -29,12 +29,12 @@ public class StudentRunner
 				{
 				case 1:
 					{
-//					Database.addStudent();
+					Database.addStudent();
 					break;
 					}
 				case 2:
 					{
-//					Database.removeStudent();
+					Database.removeStudent();
 					break;
 					}
 				}
@@ -50,7 +50,7 @@ public class StudentRunner
 				{
 				case 1:
 					{
-//					Database.changeGrade();
+					Database.changeGrade();
 					break;
 					}
 				case 2:
