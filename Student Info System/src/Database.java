@@ -73,13 +73,33 @@ public class Database
 			counter++;
 			}
 		Scanner userInput1 = new Scanner(System.in);
-		studentList.remove(userInput1);
+		int removeChoice = userInput1.nextInt(); 
+		java.util.ArrayList.remove(removeChoice);
+		counter = 1;
+		System.out.println("The new roster is: ");
+		for(int i = 0; i < studentList.size(); i++)
+			{
+			System.out.println(counter + "). " + studentList.get(i).getFirstName() + " " + studentList.get(i).getLastName());
+			counter++;
+			}
 		}
 	
 	public static void changeGrade()
 		{
+		int counter = 1;
 		System.out.println("Which student's grade would you like to change?");
-		System.out.println("studentlist (2).txt");
+		for(int i = 0; i < studentList.size(); i++)
+			{
+			System.out.println(counter + "). " + studentList.get(i).getFirstName() + " " + studentList.get(i).getLastName());
+			counter++;
+			}
+		Scanner userInput1 = new Scanner(System.in);
+		int classChoice = userInput1.nextInt() - 1;
+		
+		System.out.println("Which grade would you like to change?");
+		System.out.println("P1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
+		System.out.println("P2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
+		System.out.println("P3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
 		}
 	}
 
