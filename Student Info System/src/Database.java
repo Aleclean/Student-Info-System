@@ -97,9 +97,38 @@ public class Database
 		int classChoice = userInput1.nextInt() - 1;
 		
 		System.out.println("Which grade would you like to change?");
-		System.out.println("P1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
-		System.out.println("P2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
-		System.out.println("P3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
+		System.out.println("1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
+		System.out.println("2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
+		System.out.println("3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
+		int gradeChoice = userInput1.nextInt();
+		
+		if(gradeChoice == 1)
+			{
+			System.out.println("Input a letter grade to change " + studentList.get(classChoice).getCourseOne() + " grade of " + studentList.get(classChoice).getGradeOne() + " to");
+			Scanner userInput2 = new Scanner(System.in);
+			String changeGrade = userInput2.nextLine();
+			studentList.get(classChoice).setGradeOne(changeGrade);
+			}
+		
+		if(gradeChoice == 2)
+			{
+			System.out.println("Input a letter grade to change " + studentList.get(classChoice).getCourseTwo() + " grade of " + studentList.get(classChoice).getGradeTwo() + " to");
+			Scanner userInput2 = new Scanner(System.in);
+			String changeGrade = userInput2.nextLine();
+			studentList.get(classChoice).setGradeTwo(changeGrade);
+			}
+		
+		if(gradeChoice == 3)
+			{
+			System.out.println("Input a letter grade to change " + studentList.get(classChoice).getCourseThree() + " grade of " + studentList.get(classChoice).getGradeThree() + " to");
+			Scanner userInput2 = new Scanner(System.in);
+			String changeGrade = userInput2.nextLine();
+			studentList.get(classChoice).setGradeThree(changeGrade);
+			}
+		System.out.println("The student's new grades are: ");
+		System.out.println("1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
+		System.out.println("2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
+		System.out.println("3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
 		}
 	}
 
