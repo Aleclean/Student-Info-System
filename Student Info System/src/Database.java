@@ -74,7 +74,7 @@ public class Database
 			}
 		Scanner userInput1 = new Scanner(System.in);
 		int removeChoice = userInput1.nextInt(); 
-		java.util.ArrayList.remove(removeChoice);
+		studentList.remove(removeChoice - 1);
 		counter = 1;
 		System.out.println("The new roster is: ");
 		for(int i = 0; i < studentList.size(); i++)
