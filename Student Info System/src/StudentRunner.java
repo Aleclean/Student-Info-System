@@ -55,7 +55,7 @@ public class StudentRunner
 					}
 				case 2:
 					{
-//					Database.changeClass();
+					Database.changeClass();
 					break;
 					}
 				}

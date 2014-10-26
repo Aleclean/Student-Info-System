@@ -130,6 +130,113 @@ public class Database
 		System.out.println("2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
 		System.out.println("3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
 		}
+	
+	public static void changeClass()
+		{
+		int counter = 1;
+		System.out.println("Which student's class would you like to change?");
+		for(int i = 0; i < studentList.size(); i++)
+			{
+			System.out.println(counter + "). " + studentList.get(i).getFirstName() + " " + studentList.get(i).getLastName());
+			counter++;
+			}
+		Scanner userInput1 = new Scanner(System.in);
+		int classChoice = userInput1.nextInt() - 1;
+		
+		System.out.println("Which class would you like to change?");
+		System.out.println("1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
+		System.out.println("2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
+		System.out.println("3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());
+		int gradeChoice = userInput1.nextInt();
+		
+		if(gradeChoice == 1)
+			{
+			System.out.println("Change class to: ");
+			System.out.println("2). " + studentList.get(classChoice).getCourseTwo());
+			System.out.println("3). " + studentList.get(classChoice).getCourseThree());
+			Scanner userInput2 = new Scanner(System.in);
+			int changeClass = userInput2.nextInt();
+			
+			if(changeClass == 2)
+				{
+				String orig = studentList.get(classChoice).getCourseOne();
+				String orig2 = studentList.get(classChoice).getGradeOne();
+				studentList.get(classChoice).setCourseOne(studentList.get(classChoice).getCourseTwo());
+				studentList.get(classChoice).setGradeOne(studentList.get(classChoice).getGradeTwo());
+				studentList.get(classChoice).setCourseTwo(orig);
+				studentList.get(classChoice).setGradeTwo(orig2);
+				}
+			if(changeClass == 3)
+				{
+				String orig = studentList.get(classChoice).getCourseOne();
+				String orig2 = studentList.get(classChoice).getGradeOne();
+				studentList.get(classChoice).setCourseOne(studentList.get(classChoice).getCourseThree());
+				studentList.get(classChoice).setGradeOne(studentList.get(classChoice).getGradeThree());
+				studentList.get(classChoice).setCourseThree(orig);
+				studentList.get(classChoice).setGradeThree(orig2);
+				}
+			}
+		
+		if(gradeChoice == 2)
+			{
+			System.out.println("Change class to: ");
+			System.out.println("1). " + studentList.get(classChoice).getCourseOne());
+			System.out.println("3). " + studentList.get(classChoice).getCourseThree());
+			Scanner userInput2 = new Scanner(System.in);
+			int changeClass = userInput2.nextInt();
+			
+			if(changeClass == 1)
+				{
+				String orig = studentList.get(classChoice).getCourseTwo();
+				String orig2 = studentList.get(classChoice).getGradeTwo();
+				studentList.get(classChoice).setCourseTwo(studentList.get(classChoice).getCourseOne());
+				studentList.get(classChoice).setGradeTwo(studentList.get(classChoice).getGradeOne());
+				studentList.get(classChoice).setCourseOne(orig);
+				studentList.get(classChoice).setGradeOne(orig2);
+				}
+			if(changeClass == 3)
+				{
+				String orig = studentList.get(classChoice).getCourseTwo();
+				String orig2 = studentList.get(classChoice).getGradeTwo();
+				studentList.get(classChoice).setCourseTwo(studentList.get(classChoice).getCourseThree());
+				studentList.get(classChoice).setGradeTwo(studentList.get(classChoice).getGradeThree());
+				studentList.get(classChoice).setCourseThree(orig);
+				studentList.get(classChoice).setGradeThree(orig2);
+				}
+			}
+		
+		if(gradeChoice == 3)
+			{
+			System.out.println("Change class to: ");
+			System.out.println("1). " + studentList.get(classChoice).getCourseOne());
+			System.out.println("2). " + studentList.get(classChoice).getCourseTwo());
+			Scanner userInput2 = new Scanner(System.in);
+			int changeClass = userInput2.nextInt();
+			
+			if(changeClass == 1)
+				{
+				String orig = studentList.get(classChoice).getCourseThree();
+				String orig2 = studentList.get(classChoice).getGradeThree();
+				studentList.get(classChoice).setCourseThree(studentList.get(classChoice).getCourseOne());
+				studentList.get(classChoice).setGradeThree(studentList.get(classChoice).getGradeOne());
+				studentList.get(classChoice).setCourseOne(orig);
+				studentList.get(classChoice).setGradeOne(orig2);
+				}
+			if(changeClass == 2)
+				{
+				String orig = studentList.get(classChoice).getCourseThree();
+				String orig2 = studentList.get(classChoice).getGradeThree();
+				studentList.get(classChoice).setCourseThree(studentList.get(classChoice).getCourseTwo());
+				studentList.get(classChoice).setGradeThree(studentList.get(classChoice).getGradeTwo());
+				studentList.get(classChoice).setCourseTwo(orig);
+				studentList.get(classChoice).setGradeTwo(orig2);
+				}
+			}
+		System.out.println("The student's new classes are: ");
+		System.out.println("1). " + studentList.get(classChoice).getCourseOne() + " " + studentList.get(classChoice).getGradeOne());
+		System.out.println("2). " + studentList.get(classChoice).getCourseTwo() + " " + studentList.get(classChoice).getGradeTwo());
+		System.out.println("3). " + studentList.get(classChoice).getCourseThree() + " " + studentList.get(classChoice).getGradeThree());		
+		}
 	}
 
 
