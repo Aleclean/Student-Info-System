@@ -72,15 +72,36 @@ public class StudentRunner
 				{
 				case 1:
 					{
+					int counter = 1;
 					Collections.sort(Database.studentList, new NameSorter());
+					for(int i = 0; i < Database.studentList.size(); i++)
+						{
+						System.out.println(counter + "). " + Database.studentList.get(i).getFirstName() + " " + Database.studentList.get(i).getLastName());
+						counter++;
+						}
+					break;
 					}
 				case 2:
 					{
+					int counter = 1;
 					Collections.sort(Database.studentList, new GPASorter());
+					for(int i = 0; i < Database.studentList.size(); i++)
+						{
+						System.out.println(counter + "). " + Database.studentList.get(i).getFirstName() + " " + Database.studentList.get(i).getLastName());
+						counter++;
+						}
+					break;
 					}
 				case 3:
 					{
+					int counter = 1;
 					Collections.sort(Database.studentList, new CourseSorter());
+					for(int i = 0; i < Database.studentList.size(); i++)
+						{
+						System.out.println(counter + "). " + Database.studentList.get(i).getFirstName() + " " + Database.studentList.get(i).getLastName());
+						counter++;
+						}
+					break;
 					}
 				}
 			}
